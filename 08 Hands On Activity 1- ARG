@@ -1,0 +1,27 @@
+package ariego;
+import java.util.Scanner;
+
+public class ActivityniAshley {
+    public static void main(String[] args) {
+        Scanner Anne = new Scanner(System.in);
+        
+        System.out.print("Enter student number: ");
+        String studentNumber = Anne.nextLine();
+        
+        if (isValidStudentNumber(studentNumber)) {
+            System.out.println("Congratulations, you managed to input your student number correctly!");
+            System.out.println("Welcome to 08 Hands-On Activity - ARG!");
+            System.out.println("Prepare yourself for exciting Journey as you go through in my Program!");
+        } else {
+            System.out.println("Oops! It seems like your student number is not quite right.");
+            System.out.println("Don't worry, we won't hold it against you. Even the experts in programming make mistakes.");
+            System.out.println("Just make sure to double-check your student number and try again.");
+        }
+        System.out.println("Thanks for following the Code Structure. The Program will then exit automatically");
+    }
+    
+    public static boolean isValidStudentNumber(String studentNumber) {
+        String regex = "\\d{4}-\\d{2}-\\d{3}";
+        return studentNumber.matches(regex);
+    }
+}
